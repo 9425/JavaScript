@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index_23</title>
+    <script type="text/javascript">
+        // //对于object
+        // var obj1=new Object();//JavaScript中的内置函数
+        // //可以在Object中任意添加变量
+        // //像object中新增属性
+        // obj1.sid=10;
+        // obj1.sname="mike";
+        // //新增函数
+        // obj1.sayHello=function (param) {
+        //     window.alert(obj1.sname)//此处不能直接输出sname,因为sname没有存在window中，而是存储在Obj1中
+        //     window.alert(param)
+        // }
+        // obj1.sayHello("allen")
+
+        var obj2=new Object();
+        //添加变量
+        obj2["deptNo"]=20
+        //window.alert(deptNo)//此处将会直接报错，因为deptNO是存储在obj2中的
+        //元素，不是存储在window中的元素，存储在window中的元素又叫做全局变量
+        window.alert(obj2.deptNo)
+        var departName="dname"
+        window.alert(departName)
+        obj2[departName]="operation";//此处相当于obj2.dname="operation"
+        //因为departName是引用，传过来的是引用指向的值
+        window.alert(obj2.dname)
+
+        //移除dname属性
+        delete obj2.dname
+        window.alert(obj2.dname)
+    </script>
+</head>
+<body>
+</body>
+</html>

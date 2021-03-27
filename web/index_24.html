@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index_24</title>
+    <script type="text/javascript">
+        function fun1() {
+            return "abc";
+        }
+        // //将fun1当作普通函数进行调用
+        // var num1=fun1();
+        // window.alert(num1+"****"+typeof num1)
+
+        //将fun1()当作构造函数进行调用时，内部的return直接失效
+        var num2=new fun1();
+        window.alert(num2+"********"+typeof num2)
+    </script>
+</head>
+<body>
+</body>
+</html>

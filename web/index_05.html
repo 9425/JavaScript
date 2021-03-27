@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index_05</title>
+    <script typeof="text/javascript">
+        //var obj1=new Date();//返回一个Object类型的日期对象
+        //var obj1=new Array();//返回一个数组对象，类型为Object类型
+
+        //通过new产生的对象均是Object类型的对象，但是如果直接调用函数时没有new
+        //对象，此时的操作对象是浏览器对象
+        //var obj1=new Object();//返回一个Object对象
+
+        //声明一个函数
+        function fun1(){
+            window.alert("fun1 is run...")
+        }
+        //在script中，如果函数出现在html标签中，一般需要带上(),但是如果是出现在
+        //script程序段中，()一般均省略
+        window.alert("obj1类型为："+typeof fun1)
+    </script>
+</head>
+<body>
+</body>
+</html>

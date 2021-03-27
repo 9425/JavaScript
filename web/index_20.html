@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index_20</title>
+    <script type="text/javascript">
+        fun1()
+        function fun1() {
+            window.alert("fun1 is run...")
+        }
+        //fun1()
+        //因此浏览器在对html文件编译时，对于script中的函数处理方式为：分为两个步骤
+        //在第一步中，将以标准形式命名的函数用创建内存空间，并分配引用对象进行管理，在第二步中
+        //便可在函数声明前进行调用
+
+        //但是对于匿名方式声明的函数，第一步是当作命令行进行处理的，因此并不会为其创建空间，然后分配
+        //对象进行管理，因此对于匿名声明的函数，如果调用发生在声明之前，此时将会出现错误
+
+        //fun2();
+        var fun2=function () {
+            window.alert("fun2 is run...")
+        }
+        fun2()
+    </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index_18</title>
+    <script type="text/javascript">
+        function fun2() {
+            window.alert("fun2在运行时得到的参数个数"+arguments.length);
+            for (var i=0;i<arguments.length;i++){
+                var param=arguments[i];
+                window.alert("第"+(i+1)+"个实参的值="+param+"，实参数据类型："+typeof param)
+            }
+        }
+        fun2(1,"abc")
+        function fun3() {
+            if (arguments.length==1&&typeof arguments[0]=='string'){
+                window.alert("hello"+arguments[0])
+            } else if (arguments.length==2&&typeof arguments[0]=='number'&&typeof arguments[1]=='number'){
+                var num3=arguments[0]+arguments[1]
+                window.alert("数字"+arguments[0]+"+"+arguments[1]+"="+num3)
+            }
+        }
+        //fun3("yanghui")
+        fun3(1,2)
+    </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index_07</title>
+    <script typeof="text/javascript">
+        //此处讨论关于undefined类型的定义
+        var num1;
+        var num1=undefined;
+        /*javaScript中的所有变量在没有进行赋值时，其默认值都是undefined，
+        同时由于JavaScript中是根据变量所赋值的类型判断变量到的数据类型，因为变量
+        没有进行赋值，因此它的数据类型也是undefined
+        //同时要注意：将undefined当作一种数据类型这种看法是错误的！！！
+        */
+        var num1=null;
+        var num1=NaN;//表示一个非法的数字，但是此数据的类型依然认为是number类型
+
+        window.alert("num1的值："+num1)
+        window.alert("num1的数据类型："+typeof num1)
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index_22</title>
+    <script type="text/javascript">
+        var name="mike"
+        var age=23
+        function fun1() {
+            window.alert("hello:"+name)
+        }
+        function fun2() {
+            window.alert("bye:"+name)
+        }
+        // fun1()
+        // fun2()
+
+
+        // window.alert(window.name)
+        // window.alert(window.age)
+        function fun3() {
+            var sex="man" //sex属于全局变量
+            home="辽宁";
+            //上述代码执行时，相当于在window创建列一个home变量，同时令
+            //window.home="辽宁"
+        }
+        window.alert(window.home);//此时将会输出undefiend,这是因为在为对fun3()
+        //进行调用之前，此时的相当于还没由对home变量进行初始化
+        fun3()
+        window.alert(home)
+    </script>
+</head>
+<body>
+</body>
+</html>

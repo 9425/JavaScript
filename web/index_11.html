@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index_11</title>
+    <script type="text/javascript">
+        function fun1() {
+            var domArray=document.getElementsByTagName("p");
+            for (var i=0;i<domArray.length;i++){
+                var domObj=domArray[i];
+                window.alert(domObj.innerHTML);
+            }
+        }
+    </script>
+</head>
+<body>
+<center>
+    <div>这是第一个div标签</div>
+    <p>这是第一个段落标签</p>
+    <div>这是第二个div标签</div>
+    <p>这是第二个段落标签</p>
+    <div>这是第三个div标签</div>
+    <p>这是第三个段落标签</p>
+    <br>
+    <input type="button" value="定位段落标签显示的内容..." onclick="fun1()"/>
+</center>
+</body>
+</html>

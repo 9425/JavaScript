@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index_09</title>
+    <script typeof="text/javascript">
+        //JavaScript中函数的声明有两种方式
+        //一种是标准形式：标准形式的函数在浏览器进行编译的时候，会进行两次加载，第一次
+        //识别出标准命名的函数，分配空间，指定一个function对象进行管理，在第二次的时候，
+        //就开始进行命令行的执行
+
+        //一种是匿名函数形式：匿名函数浏览器在进行第一次编译的时候，无法识别，只能当作普通的命令行
+
+        //JavaScript中的函数在声明的时候，不能声明返回值类型（这是因为返回值可以是任何类型，无法进行声明），
+        // 同时对于函数中的变量声明，不能带有类型，只需要声明
+        //变量的名字即可
+        function fun1(name) {
+            window.alert("hello："+name)
+        }
+        function fun2(n1,n2) {
+            var num=n1+n2;
+            return num;
+        }
+        function fun3() {
+            window.alert("测试成功...")
+        }
+        fun1("yanghui")
+        var result=fun2(1,2)
+        window.alert("计算结果为："+result)
+    </script>
+</head>
+<body>
+<input type="button" value="测试" onclick="fun3()">
+</body>
+</html>

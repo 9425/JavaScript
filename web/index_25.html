@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index_25</title>
+    <script type="text/javascript">
+        //创建一个全局变量
+        var sname="allen"
+        //创建一个函数,创建的这个函数本身相当于一个全局变量
+        //window.Student=function(){}
+        function Student() {
+            this.sid=100;
+            this.sname="mike";
+            //上述this指的是调用此方法的对象，如果是window进行调用，那么此时this
+            //相当于window对象
+        }
+        // Student();//此时调用Studnet函数，相当于用window调用了Student函数
+        // //因为是window调用了函数，所以此时的this相当于window对象
+        // window.alert(window.sname)//mike
+
+        var obj=new Student();
+        window.alert(window.sname)
+        //如果上面的代码不进行注释，那么此时上面的代码将修改全局变量的值，此时输出的始终为mike
+    </script>
+</head>
+<body>
+
+</body>
+</html>

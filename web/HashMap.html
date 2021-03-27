@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HashMap</title>
+    <script type="text/javascript">
+        function HashMap() {
+            var obj=new Object();//利用Object可以随意添加元素的性质来进行模拟hashMap
+            //此处的obj相当于一个盒子，对要进行操作的数据进行存储
+            this.put=function (key,value) {
+                obj[key]=value;//将传入的变量一个当作引用，一个当作存储的值
+            }
+            this.get=function (key) {
+                return obj[key]
+            }
+        }
+
+        var map=new HashMap();
+        //使用new的方式创建了map,此时函数中的this指向的时map
+        map.put("key1",100)
+        map.put("key2",200)
+        var num1=map.get("key1")
+        window.alert(num1)
+    </script>
+</head>
+<body>
+</body>
+</html>

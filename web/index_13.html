@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index_13</title>
+    <script type="text/javascript ">
+        //首先读取全选/全不选的checkbox状态
+        function fun1() {
+            //获得标题行上checkbox的checked属性值
+            var flag=document.getElementById("one").checked;
+            //定位数据行所有的checkbox
+            var domArray=document.getElementsByName("ck");
+            //将标题行上的checkbox属性值依次赋值给数据行上的checkbox
+            for (var i=0;i<domArray.length;i++){
+                var domObj=domArray[i];
+                domObj.checked=flag;
+            }
+        }
+        function fun2() {
+            //首先判断所选中的checkbox状态
+            //首先获取所有的checkbox状态
+            var domArray1=document.getElementsByName("ck");
+            //然后然后根据循环进行标记
+            var flag1=0;
+            for (var i=0;i<domArray1.length;i++){
+                var domObj1=domArray1[i];
+                if (domObj1.checked==true){
+                    flag1=flag1+1;
+                }
+            }
+            if (flag1==3){
+                document.getElementById("one").checked=true;
+            } else {
+                document.getElementById("one").checked=false;
+            }
+        }
+        function fun3() {
+            var obj=document.getElementById("one").checked;
+            window.alert(obj);
+        }
+        function fun4(domObj) {
+            domObj.style.backgroundColor="blue";
+        }
+        function fun5(domObj) {
+            domObj.style.backgroundColor="white"
+        }
+    </script>
+</head>
+<body>
+<table border="2" align="center">
+    <!--一般要对某一个html标签进行处理时，通常会通过document进行获取html
+    标签，然后通过数组循环的方式进行处理，但是此处，是将此html标签的对象
+    直接进行了传递-->
+    <!--这里的this指的是鼠标移开这个事件本身，事件本身就是一个DOM对象
+    ,也就是这个事件本身发生的时候，将会把-->
+    <tr onmouseover="fun4(this)" onmouseout="fun5(this)">
+        <td>
+            <input type="checkbox" id="one" onclick="fun1()"/>全选/全不选
+        </td>
+        <td>
+            职员姓名
+        </td>
+        <td>
+            职员职位
+        </td>
+        <td>
+            职员工资
+        </td>
+    </tr>
+    <tr onmouseover="fun4(this)" onmouseout="fun5(this)">
+        <td>
+            <input type="checkbox" name="ck" onclick="fun2()">
+        </td>
+        <td>
+            MIKE
+        </td>
+        <td>
+            初级程序员
+        </td>
+        <td>
+            10000
+        </td>
+    </tr>
+    <tr onmouseover="fun4(this)" onmouseout="fun5(this)">
+        <td>
+            <input type="checkbox" name="ck" onclick="fun2()">
+        </td>
+        <td>
+            SMITH
+        </td>
+        <td>
+            高级程序员
+        </td>
+        <td>
+            40000
+        </td>
+    </tr>
+    <tr onmouseover="fun4(this)" onmouseout="fun5(this)">
+        <td>
+            <input type="checkbox" name="ck" onclick="fun2()">
+        </td>
+        <td>
+            MIKE
+        </td>
+        <td>
+            架构师
+        </td>
+        <td>
+            50000
+        </td>
+    </tr>
+</table>
+<input type="button" name="button" value="获取checkbox的值" onclick="fun3()"/>
+</body>
+</html>
